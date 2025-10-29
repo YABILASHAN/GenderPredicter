@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap; /* Helps wrap on small screens */
 }
 
 .input-wrapper input {
@@ -63,3 +64,52 @@ footer span {
   font-weight: 600;
   color: #feca57;
 }
+
+/* 📱 Mobile Devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .app-title {
+    font-size: 22px;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-wrapper input {
+    width: 100%;
+    max-width: 280px;
+    font-size: 15px;
+  }
+
+  .input-wrapper button {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+}
+
+/* 💻 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .app-title {
+    font-size: 25px;
+  }
+
+  .input-wrapper input {
+    width: 250px;
+  }
+
+  .input-wrapper button {
+    padding: 10px 18px;
+  }
+}
+
+
